@@ -9,6 +9,7 @@ public class Porgram
     {
         var url = "https://economia.awesomeapi.com.br/last/";
         using HttpClient client = new() { BaseAddress = new Uri(url) };
+
         var response = await client.GetAsync("/USD-BRL");
         if (response.IsSuccessStatusCode)
         {
